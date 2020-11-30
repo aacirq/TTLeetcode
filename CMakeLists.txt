@@ -3,4 +3,4 @@ project(TTLeetcode)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(TTLeetcode main.cpp)
+add_executable(TTLeetcode main.cpp Solutions/q148_SortList.cpp basic.h Solutions/testSolution.cpp main_include.h)
