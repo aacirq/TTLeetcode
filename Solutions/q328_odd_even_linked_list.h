@@ -1,6 +1,8 @@
 //
 // Created by renxin on 2020/12/14.
-//
+// NOTE: 实现循环和重连链表时，利用奇数结点(odd_node)和偶数结点(even_node)来进行，循环条件也是利用这两个结点；
+//       如果直接利用head逐个往后进行迭代，只利用奇数结点(odd_node)和偶数结点(even_node)来进行重连链表，代码会很复杂，不优雅。
+//       以后注意要先思考怎么实现比较好，再着手写。思考很重要！！！
 
 #ifndef TTLEETCODE_Q328_ODD_EVEN_LINKED_LIST_H
 #define TTLEETCODE_Q328_ODD_EVEN_LINKED_LIST_H
@@ -11,27 +13,17 @@ class Solution {
 public:
   ListNode* oddEvenList(ListNode *head) {
     if (!head) return nullptr;
-    ListNode *odd_head  = head;
-    ListNode *odd_node  = odd_head;
-    head = head->next;
-    ListNode *even_head = head;
+    ListNode *odd_node  = head;
+    ListNode *even_head = head->next;
     ListNode *even_node = even_head;
-    while (head) {
-      if (head->next) {
-        odd_node->next = head->next;
-        odd_node = odd_node->next;
-      }
-      head = head->next;
-      if (head) {
-        even_node->next = head->next;
-        even_node = even_node->next;
-        head = head->next;
-      }
+    while (even_node && even_node->next) {
+      odd_node->next = even_node->next;
+      odd_node = odd_node->next;
+      even_node->next = odd_node->next;
+      even_node = even_node->next;
     }
     odd_node->next = even_head;
-    if (even_node)
-      even_node->next = nullptr;
-    return odd_head;
+    return head;
   }
 };
 
