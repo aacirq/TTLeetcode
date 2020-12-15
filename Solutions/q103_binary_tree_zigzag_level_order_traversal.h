@@ -1,5 +1,7 @@
 //
 // Created by renxin on 2020/12/15.
+// 方法1：用一个变量表示奇数层和偶数层，先按照层序遍历的方式，然后偶数层翻转（这种方法在翻转上花费一些时间）
+// *方法2：可以开vector的时候直接开好相应大小，然后奇数层顺着填，偶数层逆着填
 //
 
 #ifndef TTLEETCODE_Q103_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL_H
@@ -18,20 +20,14 @@ public:
     while (!s.empty()) {
       int sz = s.size();
       vector<int> line(sz);
-      if (inorder) {
-        for (int i = 0; i < sz; ++i) {
-          line[i] = s.front()->val;
-          if (s.front()->left)  s.push(s.front()->left);
-          if (s.front()->right) s.push(s.front()->right);
-          s.pop();
-        }
-      } else {
-        for (int i = sz - 1; i >= 0; --i) {
-          line[i] = s.front()->val;
-          if (s.front()->left)  s.push(s.front()->left);
-          if (s.front()->right) s.push(s.front()->right);
-          s.pop();
-        }
+      int b, e, step;
+      if (inorder) { b = 0;      e = sz; step = 1; }
+      else         { b = sz - 1; e = -1; step = -1; }
+      for (int i = b; i != e; i += step) {
+        line[i] = s.front()->val;
+        if (s.front()->left)  s.push(s.front()->left);
+        if (s.front()->right) s.push(s.front()->right);
+        s.pop();
       }
       inorder = !inorder;
       ret.push_back(line);
