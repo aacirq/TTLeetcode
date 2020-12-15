@@ -6,6 +6,7 @@
 #include <list>
 #include <stack>
 #include <queue>
+#include <deque>
 #include <unordered_map>
 #include <unordered_set>
 #include <algorithm>
@@ -36,5 +37,8 @@ void display(const ListNode *node);
 
 // display vector
 void display(const std::vector<int> &vec);
+
+// display vector of vector
+void display(const std::vector<std::vector<int>> &vec);
 
 #endif // TTLEETCODE_BASIC_H
