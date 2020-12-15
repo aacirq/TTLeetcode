@@ -3,6 +3,8 @@
 // NOTE: 实现循环和重连链表时，利用奇数结点(odd_node)和偶数结点(even_node)来进行，循环条件也是利用这两个结点；
 //       如果直接利用head逐个往后进行迭代，只利用奇数结点(odd_node)和偶数结点(even_node)来进行重连链表，代码会很复杂，不优雅。
 //       以后注意要先思考怎么实现比较好，再着手写。思考很重要！！！
+// 自己的问题：一直想着用head来进行索引，没有习惯用odd_note和even_node来索引。
+//
 
 #ifndef TTLEETCODE_Q328_ODD_EVEN_LINKED_LIST_H
 #define TTLEETCODE_Q328_ODD_EVEN_LINKED_LIST_H
