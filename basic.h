@@ -27,20 +27,6 @@ struct TreeNode {
   TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 
-// Definition for a Node.(List with random pointer)
-class Node {
-public:
-  int val;
-  Node* next;
-  Node* random;
-
-  Node(int _val) {
-    val = _val;
-    next = nullptr;
-    random = nullptr;
-  }
-};
-
 // create List according to a vector<int>
 // 可以直接用initiallizer_list，即construct_list({ 1, 2, 3 })
 ListNode *construct_list(const std::vector<int> &vec);

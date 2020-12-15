@@ -4,8 +4,6 @@
 
 #include "basic.h"
 
-// create List according to a vector<int>
-// 可以直接用initiallizer_list，即construct_list({ 1, 2, 3 })
 ListNode *construct_list(const std::vector<int> &vec) {
   ListNode *head = new ListNode();
   ListNode *node = head;
@@ -19,7 +17,6 @@ ListNode *construct_list(const std::vector<int> &vec) {
   return head;
 }
 
-// display list
 void display(const ListNode *node) {
   cout << "List: ";
   if (!node) {
@@ -33,7 +30,6 @@ void display(const ListNode *node) {
   cout << node->val << endl;
 }
 
-// display vector
 void display(const std::vector<int> &vec) {
   cout << "Vector (" << vec.size() << "): [ ";
   auto itr = vec.begin(), itr_e = vec.end();
