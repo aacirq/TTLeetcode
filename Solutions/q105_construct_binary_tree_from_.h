@@ -6,8 +6,8 @@
 //    利用在inorder中找到元素的位置，减去函数执行之前的左边界下标，就是增多的量，避免了一些运算。
 //
 
-#ifndef TTLEETCODE_Q105_H
-#define TTLEETCODE_Q105_H
+#ifndef TTLEETCODE_Q105_CONSTRUCT_BINARY_TREE_FROM__H
+#define TTLEETCODE_Q105_CONSTRUCT_BINARY_TREE_FROM__H
 
 #include "../basic.h"
 
@@ -37,4 +37,4 @@ static void solve() {
   display(s.buildTree(preorder, inorder));
 }
 
-#endif //TTLEETCODE_Q105_H
+#endif //TTLEETCODE_Q105_CONSTRUCT_BINARY_TREE_FROM__H
