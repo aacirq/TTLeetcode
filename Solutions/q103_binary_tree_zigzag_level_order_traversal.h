@@ -37,13 +37,12 @@ public:
 };
 
 static void solve() {
-  display(construct_tree({  }));
-  TreeNode *node = construct_tree({ 1 });
-  display(node);
-  TreeNode *node1 = construct_tree({ 1, TREE_NULL, 3, TREE_NULL, TREE_NULL, 6, 7 });
-  display(node1);
-  display(construct_tree({ 1, TREE_NULL, 3, TREE_NULL, TREE_NULL, 6}));
-  display(construct_tree({ 3, 9, 20, TREE_NULL, TREE_NULL, 15, 7 }));
+  Solution s;
+  display(s.zigzagLevelOrder(construct_tree({  })));
+  display(s.zigzagLevelOrder(construct_tree({ 1 })));
+  display(s.zigzagLevelOrder(construct_tree({ 1, TREE_NULL, 3, TREE_NULL, TREE_NULL, 6, 7 })));
+  display(s.zigzagLevelOrder(construct_tree({ 1, TREE_NULL, 3, TREE_NULL, TREE_NULL, 6})));
+  display(s.zigzagLevelOrder(construct_tree({ 3, 9, 20, TREE_NULL, TREE_NULL, 15, 7 })));
 }
 
 #endif // TTLEETCODE_Q103_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL_H
