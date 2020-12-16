@@ -1,5 +1,5 @@
 //
-// Created by renxi on 2020/12/16.
+// Created by renxin on 2020/12/16.
 //
 
 #ifndef TTLEETCODE_Q104_MAXIMUM_DEPTH_OF_BINARY_TREE_H
