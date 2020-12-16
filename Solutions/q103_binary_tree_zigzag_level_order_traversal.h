@@ -11,7 +11,7 @@
 
 class Solution {
 public:
-  vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+  vector<vector<int>> zigzagLevelOrder(TreeNode *root) {
     vector<vector<int>> ret;
     if (root == nullptr) return ret;
     queue<TreeNode *> s;
@@ -37,8 +37,13 @@ public:
 };
 
 static void solve() {
-  vector<vector<int>> vec = { {1}, {1, 2}, {1, 2, 3} };
-  display(vec);
+  display(construct_tree({  }));
+  TreeNode *node = construct_tree({ 1 });
+  display(node);
+  TreeNode *node1 = construct_tree({ 1, TREE_NULL, 3, TREE_NULL, TREE_NULL, 6, 7 });
+  display(node1);
+  display(construct_tree({ 1, TREE_NULL, 3, TREE_NULL, TREE_NULL, 6}));
+  display(construct_tree({ 3, 9, 20, TREE_NULL, TREE_NULL, 15, 7 }));
 }
 
 #endif // TTLEETCODE_Q103_BINARY_TREE_ZIGZAG_LEVEL_ORDER_TRAVERSAL_H

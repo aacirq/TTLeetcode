@@ -17,6 +17,23 @@ ListNode *construct_list(const std::vector<int> &vec) {
   return head;
 }
 
+TreeNode *construct_tree(const std::vector<int64_t> &vec) {
+  if (vec.empty()) return nullptr;
+  vector<TreeNode *> node_vec(vec.size(), nullptr);
+  for (int i = 0; i < vec.size(); ++i) {
+    if (vec[i] != TREE_NULL) {
+      node_vec[i] = new TreeNode(vec[i]);
+      if (i > 0) {
+        if (i % 2 == 1)
+          node_vec[i / 2]->left = node_vec[i];
+        else
+          node_vec[(i - 1) / 2]->right = node_vec[i];
+      }
+    }
+  }
+  return node_vec[0];
+}
+
 void display(const ListNode *node) {
   cout << "List: ";
   if (!node) {
@@ -59,4 +76,42 @@ void display(const std::vector<std::vector<int>> &vec) {
     }
   }
   cout << endl << "]" << endl;
+}
+
+void display(TreeNode *root) {
+  cout << "Binary tree:" << endl;
+  if (root == nullptr) {
+    cout << "<empty>" << endl;
+    return;
+  }
+  queue<TreeNode *> q;
+  q.push(root);
+  int sz;
+  bool all_null = false;
+  while (!all_null) {
+    vector<TreeNode *> line;
+    sz = q.size();
+    all_null = true;
+    for (int i = 0; i < sz; ++i) {
+      if (q.front() != nullptr) {
+        all_null = false;
+        q.push(q.front()->left);
+        q.push(q.front()->right);
+      } else {
+        q.push(nullptr);
+        q.push(nullptr);
+      }
+      line.push_back(q.front());
+      q.pop();
+    }
+    if (!all_null) {
+      for (auto n : line) {
+        if (n != nullptr)
+          cout << n->val << " ";
+        else
+          cout << "* ";
+      }
+      cout << endl;
+    }
+  }
 }
