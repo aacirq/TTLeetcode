@@ -15,4 +15,4 @@ add_executable(TTLeetcode
         Solutions/q103_binary_tree_zigzag_level_order_traversal.h
         Solutions/q104_maximum_depth_of_binary_tree.h
         Solutions/q105_construct_binary_tree_from_.h
-        Solutions/q108_convert_sorted_array_to_.h Solutions/q116_populating_next_right_pointers_.h)
+        Solutions/q108_convert_sorted_array_to_.h Solutions/q116_populating_next_right_pointers_.h Solutions/q124_binary_tree_maximum_path_sum.h)
