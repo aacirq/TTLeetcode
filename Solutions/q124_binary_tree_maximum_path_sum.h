@@ -1,5 +1,7 @@
 //
 // Created by renxin on 2020/12/17.
+// 思路是对的，也是好的，但是在自己实现的时候，用了太多的判断，导致运行时间长
+// 保存了旧代码，也保存了新的代码
 //
 
 #ifndef TTLEETCODE_Q124_BINARY_TREE_MAXIMUM_PATH_SUM_H
