@@ -11,10 +11,11 @@
 #include "Solutions/q104_maximum_depth_of_binary_tree.h"
 #include "Solutions/q105.h"
 #include "Solutions/q108_convert_sorted_array_to_.h"
+#include "Solutions/q124_binary_tree_maximum_path_sum.h"
 #endif
 
 #if 1
-#include "Solutions/q124_binary_tree_maximum_path_sum.h"
+#include "Solutions/q230_kth_smallest_element_in_a_bst.h"
 #endif
 
 #if 0
