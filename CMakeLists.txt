@@ -18,4 +18,5 @@ add_executable(TTLeetcode
         solutions/q108_convert_sorted_array_to_.h
         solutions/q116_populating_next_right_pointers_.h
         solutions/q124_binary_tree_maximum_path_sum.h
-        solutions/q230_kth_smallest_element_in_a_bst.h typical_implement/binary_tree_traverse.h)
+        solutions/q230_kth_smallest_element_in_a_bst.h
+        typical_implement/binary_tree_traverse.h)

@@ -1,5 +1,9 @@
 //
 // Created by renxin on 2020/12/19.
+// 这个文件是对二叉树前序、中序、后序、层序的典型实现
+// 其中，前中后序都包括递归、非递归、morris实现方法
+// 层序是利用队列的典型实现
+// 不是对类的设计，这是一个参考代码文件，没有按照设计类的方法进行编码，为了方便，将实现代码合在了同一个文件中，且实现代码在类体定义内
 //
 
 #ifndef TTLEETCODE_BINARY_TREE_TRAVERSE_H
@@ -159,6 +163,23 @@ public:
     return ret;
   }
 
+  static vector<int> levelorder(TreeNode *root) {
+    vector<int> ret;
+    if (root == nullptr) return ret;
+    queue<TreeNode *> q;
+    q.push(root);
+    while (!q.empty()) {
+      int sz = q.size();
+      while (sz--) {
+        ret.push_back(q.front()->val);
+        if (q.front()->left != nullptr)  q.push(q.front()->left);
+        if (q.front()->right != nullptr) q.push(q.front()->right);
+        q.pop();
+      }
+    }
+    return ret;
+  }
+
 private:
   static void inorder_recursive_fun(TreeNode *node, vector<int> &vec) {
     if (node == nullptr) return;
@@ -213,6 +234,8 @@ static void test_traverse(const vector<int64_t> &vec) {
   display(TreeTraverse::postorder_no_recursive(root));
   cout << "postorder(morris):\t\t\t";
   display(TreeTraverse::postorder_morris(root));
+  cout << "lever-order:\t\t\t\t";
+  display(TreeTraverse::levelorder(root));
   cout << endl;
 }
 
