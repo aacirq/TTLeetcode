@@ -69,7 +69,7 @@ static void solve() {
     Solution s;
     cout << s.maxPathSum(construct_tree({ -3 })) << endl;
     cout << s.maxPathSum(construct_tree({ 1, 2, 3 })) << endl;
-    cout << s.maxPathSum(construct_tree({ -10, 9, 20, TREE_NULL, TREE_NULL, 15, 7 })) << endl;
+    cout << s.maxPathSum(construct_tree({ -10, 9, 20, tree_null, tree_null, 15, 7 })) << endl;
 }
 
 #endif // TTLEETCODE_Q124_BINARY_TREE_MAXIMUM_PATH_SUM_H

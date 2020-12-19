@@ -21,7 +21,7 @@ TreeNode *construct_tree(const std::vector<int64_t> &vec) {
     if (vec.empty()) return nullptr;
     vector<TreeNode *> node_vec(vec.size(), nullptr);
     for (int i = 0; i < vec.size(); ++i) {
-        if (vec[i] != TREE_NULL) {
+        if (vec[i] != tree_null) {
             node_vec[i] = new TreeNode(vec[i]);
             if (i > 0) {
                 if (i % 2 == 1)

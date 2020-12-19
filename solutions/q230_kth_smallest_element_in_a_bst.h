@@ -58,16 +58,16 @@ private:
 
 static void solve() {
     Solution s;
-    cout << s.kthSmallest(construct_tree({ 3, 1, 4, TREE_NULL, 2 }), 1) << endl;
-    cout << s.kthSmallest(construct_tree({ 3, 1, 4, TREE_NULL, 2 }), 2) << endl;
-    cout << s.kthSmallest(construct_tree({ 3, 1, 4, TREE_NULL, 2 }), 3) << endl;
-    cout << s.kthSmallest(construct_tree({ 3, 1, 4, TREE_NULL, 2 }), 4) << endl;
-    cout << s.kthSmallest(construct_tree({ 5, 3, 6, 2, 4, TREE_NULL, TREE_NULL, 1 }), 1) << endl;
-    cout << s.kthSmallest(construct_tree({ 5, 3, 6, 2, 4, TREE_NULL, TREE_NULL, 1 }), 2) << endl;
-    cout << s.kthSmallest(construct_tree({ 5, 3, 6, 2, 4, TREE_NULL, TREE_NULL, 1 }), 3) << endl;
-    cout << s.kthSmallest(construct_tree({ 5, 3, 6, 2, 4, TREE_NULL, TREE_NULL, 1 }), 4) << endl;
-    cout << s.kthSmallest(construct_tree({ 5, 3, 6, 2, 4, TREE_NULL, TREE_NULL, 1 }), 5) << endl;
-    cout << s.kthSmallest(construct_tree({ 5, 3, 6, 2, 4, TREE_NULL, TREE_NULL, 1 }), 6) << endl;
+    cout << s.kthSmallest(construct_tree({ 3, 1, 4, tree_null, 2 }), 1) << endl;
+    cout << s.kthSmallest(construct_tree({ 3, 1, 4, tree_null, 2 }), 2) << endl;
+    cout << s.kthSmallest(construct_tree({ 3, 1, 4, tree_null, 2 }), 3) << endl;
+    cout << s.kthSmallest(construct_tree({ 3, 1, 4, tree_null, 2 }), 4) << endl;
+    cout << s.kthSmallest(construct_tree({ 5, 3, 6, 2, 4, tree_null, tree_null, 1 }), 1) << endl;
+    cout << s.kthSmallest(construct_tree({ 5, 3, 6, 2, 4, tree_null, tree_null, 1 }), 2) << endl;
+    cout << s.kthSmallest(construct_tree({ 5, 3, 6, 2, 4, tree_null, tree_null, 1 }), 3) << endl;
+    cout << s.kthSmallest(construct_tree({ 5, 3, 6, 2, 4, tree_null, tree_null, 1 }), 4) << endl;
+    cout << s.kthSmallest(construct_tree({ 5, 3, 6, 2, 4, tree_null, tree_null, 1 }), 5) << endl;
+    cout << s.kthSmallest(construct_tree({ 5, 3, 6, 2, 4, tree_null, tree_null, 1 }), 6) << endl;
 }
 
 #endif // TTLEETCODE_Q230_KTH_SMALLEST_ELEMENT_IN_A_BST_H

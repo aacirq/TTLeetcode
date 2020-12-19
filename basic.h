@@ -13,7 +13,7 @@
 
 using namespace std;
 
-#define TREE_NULL INT64_MAX
+const long tree_null = INT64_MAX;
 
 struct ListNode {
       int val;

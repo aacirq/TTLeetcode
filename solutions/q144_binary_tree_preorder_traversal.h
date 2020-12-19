@@ -29,9 +29,9 @@ static void solve() {
 
     display(s.preorderTraversal(construct_tree({  })));
     display(s.preorderTraversal(construct_tree({ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 })));
-    display(s.preorderTraversal(construct_tree({ 1, TREE_NULL, 2, TREE_NULL, TREE_NULL, TREE_NULL, 3 })));
-    display(s.preorderTraversal(construct_tree({ 1, 2, TREE_NULL, 3 })));
-    display(s.preorderTraversal(construct_tree({ 1, 2, TREE_NULL, TREE_NULL, 3, TREE_NULL, TREE_NULL, TREE_NULL, TREE_NULL, 4 })));
+    display(s.preorderTraversal(construct_tree({ 1, tree_null, 2, tree_null, tree_null, tree_null, 3 })));
+    display(s.preorderTraversal(construct_tree({ 1, 2, tree_null, 3 })));
+    display(s.preorderTraversal(construct_tree({ 1, 2, tree_null, tree_null, 3, tree_null, tree_null, tree_null, tree_null, 4 })));
 }
 
 #endif //TTLEETCODE_Q144_BINARY_TREE_PREORDER_TRAVERSAL_H
