@@ -12,10 +12,11 @@
 #include "solutions/q105.h"
 #include "solutions/q108_convert_sorted_array_to_.h"
 #include "solutions/q124_binary_tree_maximum_path_sum.h"
+#include "solutions/q230_kth_smallest_element_in_a_bst.h"
 #endif
 
 #if 1
-#include "solutions/q230_kth_smallest_element_in_a_bst.h"
+#include "typical_implement/binary_tree_traverse.h"
 #endif
 
 #if 0
