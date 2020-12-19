@@ -13,28 +13,29 @@
 
 class Solution {
 public:
-  TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder) {
-    unordered_map<int, int> m;
-    for (int i = 0; i < inorder.size(); ++i)
-      m[inorder[i]] = i;
-    return build_fun(preorder, inorder, 0, 0, preorder.size(), m);
-  }
+    TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder) {
+        unordered_map<int, int> m;
+        for (int i = 0; i < inorder.size(); ++i)
+            m[inorder[i]] = i;
+        return build_fun(preorder, inorder, 0, 0, preorder.size(), m);
+    }
+
 private:
-  TreeNode *build_fun(vector<int> &preorder, vector<int> &inorder, int pre_ind, int left, int right, const unordered_map<int, int> &m) {
-    if (left >= right) return nullptr;
-    TreeNode *node = new TreeNode(preorder[pre_ind]);
-    int mid = m.at(preorder[pre_ind]);
-    node->left  = build_fun(preorder, inorder, pre_ind + 1, left, mid, m);
-    node->right = build_fun(preorder, inorder, pre_ind + mid - left + 1, mid + 1, right, m);
-    return node;
-  }
+    TreeNode *build_fun(vector<int> &preorder, vector<int> &inorder, int pre_ind, int left, int right, const unordered_map<int, int> &m) {
+        if (left >= right) return nullptr;
+        TreeNode *node = new TreeNode(preorder[pre_ind]);
+        int mid = m.at(preorder[pre_ind]);
+        node->left  = build_fun(preorder, inorder, pre_ind + 1, left, mid, m);
+        node->right = build_fun(preorder, inorder, pre_ind + mid - left + 1, mid + 1, right, m);
+        return node;
+    }
 };
 
 static void solve() {
-  Solution s;
-  vector<int> preorder = { 1, 2, 3 };
-  vector<int> inorder  = { 2, 3, 1 };
-  display(s.buildTree(preorder, inorder));
+    Solution s;
+    vector<int> preorder = { 1, 2, 3 };
+    vector<int> inorder  = { 2, 3, 1 };
+    display(s.buildTree(preorder, inorder));
 }
 
-#endif //TTLEETCODE_Q105_CONSTRUCT_BINARY_TREE_FROM__H
+#endif // TTLEETCODE_Q105_CONSTRUCT_BINARY_TREE_FROM__H
