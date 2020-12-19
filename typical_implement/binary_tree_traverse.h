@@ -9,13 +9,13 @@
 
 class TreeTraverse {
 public:
-  vector<int> inorder_recursive(TreeNode *root) {
+  static vector<int> inorder_recursive(TreeNode *root) {
     vector<int> ret;
     inorder_recursive_fun(root, ret);
     return ret;
   }
 
-  vector<int> inorder_no_recursive(TreeNode *root) {
+  static vector<int> inorder_no_recursive(TreeNode *root) {
     vector<int> ret;
     stack<TreeNode *> s;
     TreeNode *node = root;
@@ -33,7 +33,7 @@ public:
     return ret;
   }
 
-  vector<int> inorder_morris(TreeNode *root) {
+  static vector<int> inorder_morris(TreeNode *root) {
     vector<int> ret;
     TreeNode *predecessor = nullptr;
     while (root != nullptr) {
@@ -58,7 +58,7 @@ public:
   }
 
 private:
-  void inorder_recursive_fun(TreeNode *node, vector<int> &vec) {
+  static void inorder_recursive_fun(TreeNode *node, vector<int> &vec) {
     if (node == nullptr) return;
     inorder_recursive_fun(node->left, vec);
     vec.push_back(node->val);
@@ -66,17 +66,15 @@ private:
   }
 };
 
-static TreeTraverse t;
-
 static void test_traverse(const vector<int64_t> &vec) {
   TreeNode *root = construct_tree(vec);
   display(root);
   cout << "inorder(recursive):\t\t";
-  display(t.inorder_recursive(root));
+  display(TreeTraverse::inorder_recursive(root));
   cout << "inorder(no recursive):\t";
-  display(t.inorder_no_recursive(root));
+  display(TreeTraverse::inorder_no_recursive(root));
   cout << "inorder(morris):\t\t";
-  display(t.inorder_morris(root));
+  display(TreeTraverse::inorder_morris(root));
   cout << endl;
 }
 
