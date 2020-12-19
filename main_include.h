@@ -14,12 +14,13 @@
 #include "solutions/q124_binary_tree_maximum_path_sum.h"
 #include "solutions/q230_kth_smallest_element_in_a_bst.h"
 #include "solutions/q144_binary_tree_preorder_traversal.h"
+#include "solutions/q145_binary_tree_postorder_traversal.h"
 
 #include "typical_implement/binary_tree_traverse.h"
 #endif
 
 #if 1
-#include "solutions/q145_binary_tree_postorder_traversal.h"
+#include "typical_implement/binary_search.h"
 #endif
 
 #if 0
