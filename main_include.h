@@ -15,13 +15,14 @@
 #include "solutions/q230_kth_smallest_element_in_a_bst.h"
 #include "solutions/q144_binary_tree_preorder_traversal.h"
 #include "solutions/q145_binary_tree_postorder_traversal.h"
+#include "solutions/q114_flatten_binary_tree_to_linked_list.h"
 
 #include "typical_implement/binary_tree_traverse.h"
 #include "typical_implement/binary_search.h"
 #endif
 
 #if 1
-#include "solutions/q114_flatten_binary_tree_to_linked_list.h"
+#include "solutions/q226_invert_binary_tree.h"
 #endif
 
 #if 0
