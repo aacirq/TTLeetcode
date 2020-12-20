@@ -17,10 +17,11 @@
 #include "solutions/q145_binary_tree_postorder_traversal.h"
 
 #include "typical_implement/binary_tree_traverse.h"
+#include "typical_implement/binary_search.h"
 #endif
 
 #if 1
-#include "typical_implement/binary_search.h"
+#include "solutions/q114_flatten_binary_tree_to_linked_list.h"
 #endif
 
 #if 0
