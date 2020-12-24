@@ -15,6 +15,8 @@ using namespace std;
 
 const long tree_null = INT64_MAX;
 
+typedef int64_t tree_type;
+
 struct ListNode {
       int val;
       ListNode *next;

@@ -24,4 +24,4 @@ add_executable(TTLeetcode
         solutions/q124_binary_tree_maximum_path_sum.h
         solutions/q230_kth_smallest_element_in_a_bst.h
         solutions/q144_binary_tree_preorder_traversal.h
-        solutions/q145_binary_tree_postorder_traversal.h solutions/q114_flatten_binary_tree_to_linked_list.h solutions/q226_invert_binary_tree.h solutions/q236_lowest_common_ancestor_of_a_binary_tree.h)
+        solutions/q145_binary_tree_postorder_traversal.h solutions/q114_flatten_binary_tree_to_linked_list.h solutions/q226_invert_binary_tree.h solutions/q236_lowest_common_ancestor_of_a_binary_tree.h solutions/q297_serialize_and_deserialize_binary_tree.h)
