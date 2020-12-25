@@ -1,5 +1,11 @@
 //
 // Created by renxin on 2020/12/24.
+// 最开始用的层序的方法(利用了Leetcode上对二叉树序列化的规则)，但是很慢
+// 又改用先序的方法，不知道为什么仍然很慢。（beats 15.78%）
+//
+// !!! 找到原因了，问题处在调用substr上，最初的调用进击提供开始位置(第一个参数)，没有提供选取字符数量(第二个参数)
+// !!! TODO: 目前还不知道substr的原理，暂时还分析不了为什么会慢
+// 修改后beats 99.5%
 //
 
 #ifndef TTLEETCODE_Q297_SERIALIZE_AND_DESERIALIZE_BINARY_TREE_H
@@ -12,72 +18,37 @@ public:
     // Encodes a tree to a single string.
     string serialize(TreeNode *root) {
         string str;
-        if (root == nullptr) return str;
-        queue<TreeNode *> q;
-        q.push(root);
-        str += to_string(root->val);
-        bool all_null;
-        while (!q.empty()) {
-            int sz = q.size();
-            all_null = true;
-            string tmp_str;
-            while (sz--) {
-                tmp_str += ",";
-                if (q.front()->left != nullptr) {
-                    tmp_str += to_string(q.front()->left->val);
-                    q.push(q.front()->left);
-                    all_null = false;
-                } else {
-                    tmp_str += "null";
-                }
-                tmp_str += ",";
-                if (q.front()->right != nullptr) {
-                    tmp_str += to_string(q.front()->right->val);
-                    q.push(q.front()->right);
-                    all_null = false;
-                } else {
-                    tmp_str += "null";
-                }
-                q.pop();
-            }
-            if (!all_null) str += tmp_str;
-        }
+        serialize_fun(root, str);
         return str;
     }
 
     // Decodes your encoded data to tree.
-    TreeNode *deserialize(string &data) {
-        if (data.empty()) return nullptr;
-        int ind = 0;
-        size_t sz = 0;
-        queue<TreeNode *> q;
-        TreeNode *root;
-        root = new TreeNode(stoi(data, &sz));
-        q.push(root);
-        ind += sz;
-        while (ind < data.size()) {
-            ++ind;
-            if (data[ind] == 'n') {
-                q.front()->left = nullptr;
-                ind += 4;
-            } else {
-                q.front()->left = new TreeNode(stoi(data.substr(ind), &sz));
-                q.push(q.front()->left);
-                ind += sz;
-            }
+    TreeNode *deserialize(string data) {
+        size_t ind = 0;
+        return deserialize_fun(data, ind);
+    }
 
-            ++ind;
-            if (data[ind] == 'n') {
-                q.front()->right = nullptr;
-                ind += 4;
-            } else {
-                q.front()->right = new TreeNode(stoi(data.substr(ind), &sz));
-                q.push(q.front()->right);
-                ind += sz;
-            }
-            q.pop();
+private:
+    void serialize_fun(TreeNode *node, string &str) {
+        str += ',';
+        if (node == nullptr) {
+            str += '#';
+            return;
         }
-        return root;
+        str += to_string(node->val);
+        serialize_fun(node->left, str);
+        serialize_fun(node->right, str);
+    }
+
+    TreeNode *deserialize_fun(string &str, size_t &ind) {
+        if (str[ind] == ',') ++ind;
+        if (str[ind] == '#') { ++ind; return nullptr; }
+        size_t k = ind;
+        while (str[ind] != ',') ++ind;
+        TreeNode *node = new TreeNode(stoi(str.substr(k, ind - k)));
+        node->left = deserialize_fun(str, ind);
+        node->right = deserialize_fun(str, ind);
+        return node;
     }
 };
 
