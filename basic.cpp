@@ -17,21 +17,26 @@ ListNode *construct_list(const std::vector<int> &vec) {
     return head;
 }
 
-TreeNode *construct_tree(const std::vector<int64_t> &vec) {
+TreeNode *construct_tree(const std::vector<tree_type> &vec) {
     if (vec.empty()) return nullptr;
-    vector<TreeNode *> node_vec(vec.size(), nullptr);
-    for (int i = 0; i < vec.size(); ++i) {
-        if (vec[i] != tree_null) {
-            node_vec[i] = new TreeNode(vec[i]);
-            if (i > 0) {
-                if (i % 2 == 1)
-                    node_vec[i / 2]->left = node_vec[i];
-                else
-                    node_vec[(i - 1) / 2]->right = node_vec[i];
-            }
+    queue<TreeNode *> q;
+    TreeNode *root = new TreeNode(vec[0]);
+    q.push(root);
+    int ind = 1;
+    while (ind < vec.size()) {
+        if (vec[ind] != tree_null) {
+            q.front()->left = new TreeNode(vec[ind]);
+            q.push(q.front()->left);
         }
+        ++ind;
+        if (ind < vec.size() && vec[ind] != tree_null) {
+            q.front()->right = new TreeNode(vec[ind]);
+            q.push(q.front()->right);
+        }
+        ++ind;
+        q.pop();
     }
-    return node_vec[0];
+    return root;
 }
 
 void display(const ListNode *node) {

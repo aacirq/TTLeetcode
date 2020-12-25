@@ -130,7 +130,7 @@ static void test_codec(const vector<tree_type> &vec) {
 
 static void solve() {
     test_codec({  });
-    test_codec({ 1, tree_null, 3, tree_null, tree_null, tree_null, 5 });
+    test_codec({ 1, tree_null, 3, tree_null, 5 });
     test_codec({ 1, 2, 3, tree_null, tree_null, 4, 5 });
     test_codec({ 1, -2, 3, tree_null, tree_null, -4, 5 });
 }

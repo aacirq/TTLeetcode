@@ -39,12 +39,12 @@ static void solve() {
     display(root);
     cout << endl;
     node = s1.lowestCommonAncestor(root, root->left, root->right);
-    cout << node->val << endl;
+    cout << "Value of lowest common ancestor is: " << node->val << endl;
 
     Solution s2;
     root = construct_tree({ 3, 5, 1, 6, 2, 0, 8, tree_null, tree_null, 7, 4 });
     node = s2.lowestCommonAncestor(root, root->left, root->left->right->right);
-    cout << node->val << endl;
+    cout << "Value of lowest common ancestor is: " << node->val << endl;
 
     Solution s3;
     root = construct_tree({ 1, 2 });
@@ -52,7 +52,7 @@ static void solve() {
     display(root);
     cout << endl;
     node = s3.lowestCommonAncestor(root, root, root->left);
-    cout << node->val << endl;
+    cout << "Value of lowest common ancestor is: " << node->val << endl;
 }
 
 #endif // TTLEETCODE_Q236_LOWEST_COMMON_ANCESTOR_OF_A_BINARY_TREE_H

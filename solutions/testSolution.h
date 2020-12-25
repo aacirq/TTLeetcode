@@ -13,20 +13,12 @@
 
 #include "../basic.h"
 
-class Solution {
-public:
-    void display(ListNode *node) {
-    }
-};
-
-void solve() {
-    Solution s;
-    vector<int> vec = { 1, 2, 3, 4, 5 };
-    vector<int> vec2 = { 0 };
-    display(construct_list({ 1, 2, 3, 4, 5 }));
-    display(construct_list({ 1, 2, 3 }));
-    display(vec);
-    display(vec2);
+static void solve() {
+    display(construct_tree({  }));
+    display(construct_tree({ 1 }));
+    display(construct_tree({ 1, 2, tree_null, 3, tree_null, 4 }));
+    display(construct_tree({ 1, tree_null, 2, tree_null, 3 }));
+    display(construct_tree({ 1, 2, 3, tree_null, 4, 5 }));
 }
 
 #endif

@@ -40,8 +40,8 @@ static void solve() {
     Solution s;
     display(s.zigzagLevelOrder(construct_tree({  })));
     display(s.zigzagLevelOrder(construct_tree({ 1 })));
-    display(s.zigzagLevelOrder(construct_tree({ 1, tree_null, 3, tree_null, tree_null, 6, 7 })));
-    display(s.zigzagLevelOrder(construct_tree({ 1, tree_null, 3, tree_null, tree_null, 6})));
+    display(s.zigzagLevelOrder(construct_tree({ 1, tree_null, 3, 6, 7 })));
+    display(s.zigzagLevelOrder(construct_tree({ 1, tree_null, 3, 6})));
     display(s.zigzagLevelOrder(construct_tree({ 3, 9, 20, tree_null, tree_null, 15, 7 })));
 }
 

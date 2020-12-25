@@ -20,8 +20,8 @@ static void solve() {
 
     cout << s.maxDepth(construct_tree({  })) << endl;
     cout << s.maxDepth(construct_tree({ 1 })) << endl;
-    cout << s.maxDepth(construct_tree({ 1, tree_null, 3, tree_null, tree_null, 6, 7 })) << endl;
-    cout << s.maxDepth(construct_tree({ 1, tree_null, 3, tree_null, tree_null, 6})) << endl;
+    cout << s.maxDepth(construct_tree({ 1, tree_null, 3, 6, 7 })) << endl;
+    cout << s.maxDepth(construct_tree({ 1, tree_null, 3, 6})) << endl;
     cout << s.maxDepth(construct_tree({ 3, 9, 20, tree_null, tree_null, 15, 7 })) << endl;
 }
 
