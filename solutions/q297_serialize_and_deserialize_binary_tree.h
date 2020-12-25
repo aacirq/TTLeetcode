@@ -68,7 +68,9 @@ private:
         return node;
     }
 };
+
 #else
+
 // 解析内存的方法，能解决这个问题，但适用性不足，写着玩的:)
 class Codec {
 public:
