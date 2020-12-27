@@ -10,8 +10,8 @@
 class Solution {
 public:
     int rob(const vector<int> &nums) {
-        vector<int> n(nums.size());
         if (nums.empty()) return 0;
+        vector<int> n(nums.size());
         n[0] = nums[0];
         if (nums.size() == 1) return n[0];
         n[1] = nums[1];
