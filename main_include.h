@@ -32,7 +32,7 @@
 #endif
 
 #if 1
-
+#include "solutions/q198_house_robber.h"
 #endif
 
 #if 0

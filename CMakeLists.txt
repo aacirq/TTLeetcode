@@ -28,4 +28,4 @@ add_executable(TTLeetcode
         solutions/q114_flatten_binary_tree_to_linked_list.h
         solutions/q226_invert_binary_tree.h
         solutions/q236_lowest_common_ancestor_of_a_binary_tree.h
-        solutions/q297_serialize_and_deserialize_binary_tree.h)
+        solutions/q297_serialize_and_deserialize_binary_tree.h solutions/q198_house_robber.h)
