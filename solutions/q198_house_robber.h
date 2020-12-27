@@ -11,17 +11,15 @@ class Solution {
 public:
     int rob(const vector<int> &nums) {
         if (nums.empty()) return 0;
-        vector<int> n(nums.size());
-        n[0] = nums[0];
-        if (nums.size() == 1) return n[0];
-        n[1] = nums[1];
-        if (nums.size() == 2) return max(n[1], n[0]);
-        n[2] = nums[2] + n[0];
-        if (nums.size() == 3) return max(n[2], n[1]);
-        int k;
-        for (k = 3; k < nums.size(); ++k)
-            n[k] = nums[k] + max(n[k - 2], n[k - 3]);
-        return max(n[k - 1], n[k - 2]);
+        if (nums.size() == 1) return nums[0];
+        if (nums.size() == 2) return max(nums[0], nums[1]);
+        int first = nums[0], second = max(nums[0], nums[1]);
+        for (int k = 2; k < nums.size(); ++k) {
+            int tmp = second;
+            second = max(first + nums[k], second);
+            first = tmp;
+        }
+        return second;
     }
 };
 
