@@ -36,6 +36,7 @@
 #endif
 
 #if 1
+#include "solutions/q112_path_sum.h"
 #endif
 
 #if 0

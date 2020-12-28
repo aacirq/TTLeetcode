@@ -30,4 +30,6 @@ add_executable(TTLeetcode
         solutions/q236_lowest_common_ancestor_of_a_binary_tree.h
         solutions/q297_serialize_and_deserialize_binary_tree.h
         solutions/q198_house_robber.h
-        solutions/q213_house_robber_II.h solutions/q337_house_robber_III.h)
+        solutions/q213_house_robber_II.h
+        solutions/q337_house_robber_III.h
+        solutions/q112_path_sum.h)
