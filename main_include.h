@@ -28,6 +28,7 @@
 
 # dynamical programming
 #include "solutions/q198_house_robber.h"
+#include "solutions/q213_house_robber_II.h"
 
 // typicla_implement
 #include "typical_implement/binary_tree_traverse.h"
@@ -35,7 +36,7 @@
 #endif
 
 #if 1
-#include "solutions/q213_house_robber_II.h"
+#include "solutions/q337_house_robber_III.h"
 #endif
 
 #if 0
