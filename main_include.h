@@ -25,10 +25,10 @@
 #include "solutions/q236_lowest_common_ancestor_of_a_binary_tree.h"
 #include "solutions/q297_serialize_and_deserialize_binary_tree.h"
 
-
 # dynamical programming
 #include "solutions/q198_house_robber.h"
 #include "solutions/q213_house_robber_II.h"
+#include "solutions/q337_house_robber_III.h"
 
 // typicla_implement
 #include "typical_implement/binary_tree_traverse.h"
@@ -36,7 +36,6 @@
 #endif
 
 #if 1
-#include "solutions/q337_house_robber_III.h"
 #endif
 
 #if 0

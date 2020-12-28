@@ -1,5 +1,8 @@
 //
 // Created by renxin on 2020/12/27.
+// 在第198题基础上的升级版题目
+// 要避免首尾都访问的情况，也就是说，要么第一个不访问，要么最后一个不访问
+// 假设总共有nk个数据，则得到的结果应该是 rob<0 -> nk-1> 与 rob<1 -> nk> 二者数据的最大值
 //
 
 #ifndef TTLEETCODE_Q213_HOUSE_ROBBER_II_H

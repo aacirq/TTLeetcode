@@ -1,5 +1,6 @@
 //
 // Created by renxin on 2020/12/25.
+// 到第k个点的最大值n[k] = max(nums[k] + n[k - 2], n[k - 1]);
 //
 
 #ifndef TTLEETCODE_Q198_HOUSE_ROBBER_H
