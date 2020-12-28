@@ -1,5 +1,6 @@
 //
 // Created by renxin on 2020/12/28.
+// 一定要对叶结点单独判断
 //
 
 #ifndef TTLEETCODE_Q112_PATH_SUM_H
