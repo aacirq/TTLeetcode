@@ -26,6 +26,7 @@
 #include "solutions/q297_serialize_and_deserialize_binary_tree.h"
 #include "solutions/q112_path_sum.h"
 #include "solutions/q113_path_sum_ii.h"
+#include "solutions/q437_path_sum_iii.h"
 
 # dynamical programming
 #include "solutions/q198_house_robber.h"
@@ -38,7 +39,7 @@
 #endif
 
 #if 1
-#include "solutions/q437_path_sum_iii.h"
+#include "solutions/q538_convert_bst_to_greater_tree.h"
 #endif
 
 #if 0
