@@ -35,4 +35,5 @@ add_executable(TTLeetcode
         solutions/q112_path_sum.h
         solutions/q113_path_sum_ii.h
         solutions/q437_path_sum_iii.h
-        solutions/q538_convert_bst_to_greater_tree.h)
+        solutions/q538_convert_bst_to_greater_tree.h
+        solutions/q617_merge_two_binary_trees.h)
