@@ -24,6 +24,7 @@
 #include "solutions/q226_invert_binary_tree.h"
 #include "solutions/q236_lowest_common_ancestor_of_a_binary_tree.h"
 #include "solutions/q297_serialize_and_deserialize_binary_tree.h"
+#include "solutions/q112_path_sum.h"
 
 # dynamical programming
 #include "solutions/q198_house_robber.h"
@@ -36,7 +37,7 @@
 #endif
 
 #if 1
-#include "solutions/q112_path_sum.h"
+#include "solutions/q113_path_sum_ii.h"
 #endif
 
 #if 0
