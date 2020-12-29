@@ -1,5 +1,6 @@
 //
 // Created by renxin on 2020/12/29.
+// 本质上就是求树的高度
 //
 
 #ifndef TTLEETCODE_Q543_DIAMETER_OF_BINARY_TREE_H
