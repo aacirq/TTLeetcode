@@ -28,6 +28,7 @@
 #include "solutions/q113_path_sum_ii.h"
 #include "solutions/q437_path_sum_iii.h"
 #include "solutions/q538_convert_bst_to_greater_tree.h"
+#include "solutions/q617_merge_two_binary_trees.h"
 
 # dynamical programming
 #include "solutions/q198_house_robber.h"
@@ -40,7 +41,7 @@
 #endif
 
 #if 1
-#include "solutions/q617_merge_two_binary_trees.h"
+#include "solutions/q543_diameter_of_binary_tree.h"
 #endif
 
 #if 0
