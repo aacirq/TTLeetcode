@@ -33,4 +33,5 @@ add_executable(TTLeetcode
         solutions/q213_house_robber_II.h
         solutions/q337_house_robber_III.h
         solutions/q112_path_sum.h
-        solutions/q113_path_sum_ii.h)
+        solutions/q113_path_sum_ii.h
+        solutions/q437_path_sum_iii.h)
