@@ -37,4 +37,9 @@ add_executable(TTLeetcode
         solutions/q437_path_sum_iii.h
         solutions/q538_convert_bst_to_greater_tree.h
         solutions/q617_merge_two_binary_trees.h
-        solutions/q543_diameter_of_binary_tree.h)
+        solutions/q543_diameter_of_binary_tree.h
+        solutions/q94_binary_tree_inorder_traversal.h
+        solutions/q96_unique_binary_search_trees.h
+        solutions/q98_validate_binary_search_tree.h
+        solutions/q101_symmetric_tree.h
+        solutions/q102_binary_tree_level_order_traversal.h)

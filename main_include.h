@@ -11,6 +11,9 @@
 #include "solutions/q138_copy_list_with_random_pointer.h"
 
 // tree
+#include "solutions/q94_binary_tree_inorder_traversal.h"
+#include "solutions/q96_unique_binary_search_trees.h"
+#include "solutions/q98_validate_binary_search_tree.h"
 #include "solutions/q103_binary_tree_zigzag_level_order_traversal.h"
 #include "solutions/q104_maximum_depth_of_binary_tree.h"
 #include "solutions/q105_construct_binary_tree_from_.h"
@@ -29,6 +32,7 @@
 #include "solutions/q437_path_sum_iii.h"
 #include "solutions/q538_convert_bst_to_greater_tree.h"
 #include "solutions/q617_merge_two_binary_trees.h"
+#include "solutions/q543_diameter_of_binary_tree.h"
 
 # dynamical programming
 #include "solutions/q198_house_robber.h"
@@ -41,7 +45,7 @@
 #endif
 
 #if 1
-#include "solutions/q543_diameter_of_binary_tree.h"
+#include "solutions/q101_symmetric_tree.h"
 #endif
 
 #if 0
