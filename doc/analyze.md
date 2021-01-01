@@ -1,6 +1,6 @@
 # 各种题型总结和分析
 
-到目前，刷题主要是根据**[LeetCode热题HOT 100](https://leetcode-cn.com/problemset/all/?listId=2cktkvj)**以及**[LeetCode精选TOP面试题](https://leetcode-cn.com/problemset/all/?listId=2ckc81c)**两个列表，同时加入少数不在这两个列表中但是相关的题目，在题号后面加上了**(*)**标志
+到目前，刷题主要是根据[LeetCode热题HOT 100](https://leetcode-cn.com/problemset/all/?listId=2cktkvj)以及[LeetCode精选TOP面试题](https://leetcode-cn.com/problemset/all/?listId=2ckc81c)两个列表，同时加入少数不在这两个列表中但是相关的题目，在题号后面加上了`(*)`标志
 
 ## 缩写说明
 
@@ -39,7 +39,7 @@
 | 543    | Diameter of Binary Tree                                   | 后序遍历                     | *    |
 | 617    | Merge Two Binary Trees                                    | 先序遍历                     |      |
 
-注：有些题目被分到**树**的组里面，但是在我的角度上，这些题目的重点不在树，只是将树作为表示的结构，列举出来
+注：有些题目被分到**树**的组里面，但是在我的角度上，这些题目的重点不在树，只是将树作为表示的结构，列举在下面表格中
 
 | 题号 | 题目                       | 真正重点 |
 | ---- | -------------------------- | -------- |
@@ -58,7 +58,7 @@
 
 ### 框架
 
-代码框架的内容是用c++来表述的，将代码大量简化了，只保留了最核心的部分。
+代码框架的内容是用c++来表述的，将代码大量简化了，只保留了最核心的部分（不用C++的应该也能看懂）。
 
 下述代码中，`do_something(node)`表示对`node`结点进行处理，可以是打印、计算等等。
 
