@@ -12,29 +12,30 @@
 
 // tree
 #include "solutions/q94_binary_tree_inorder_traversal.h"
-#include "solutions/q96_unique_binary_search_trees.h"
 #include "solutions/q98_validate_binary_search_tree.h"
+#include "solutions/q101_symmetric_tree.h"
 #include "solutions/q103_binary_tree_zigzag_level_order_traversal.h"
 #include "solutions/q104_maximum_depth_of_binary_tree.h"
 #include "solutions/q105_construct_binary_tree_from_.h"
 #include "solutions/q108_convert_sorted_array_to_.h"
-#include "solutions/q116_populating_next_right_pointers_.h" // 没写测试用例
-#include "solutions/q124_binary_tree_maximum_path_sum.h"
-#include "solutions/q230_kth_smallest_element_in_a_bst.h"
-#include "solutions/q144_binary_tree_preorder_traversal.h"
-#include "solutions/q145_binary_tree_postorder_traversal.h"
-#include "solutions/q114_flatten_binary_tree_to_linked_list.h"
-#include "solutions/q226_invert_binary_tree.h"
-#include "solutions/q236_lowest_common_ancestor_of_a_binary_tree.h"
-#include "solutions/q297_serialize_and_deserialize_binary_tree.h"
 #include "solutions/q112_path_sum.h"
 #include "solutions/q113_path_sum_ii.h"
+#include "solutions/q114_flatten_binary_tree_to_linked_list.h"
+#include "solutions/q116_populating_next_right_pointers_.h" // 没写测试用例
+#include "solutions/q124_binary_tree_maximum_path_sum.h"
+#include "solutions/q144_binary_tree_preorder_traversal.h"
+#include "solutions/q145_binary_tree_postorder_traversal.h"
+#include "solutions/q226_invert_binary_tree.h"
+#include "solutions/q230_kth_smallest_element_in_a_bst.h"
+#include "solutions/q236_lowest_common_ancestor_of_a_binary_tree.h"
+#include "solutions/q297_serialize_and_deserialize_binary_tree.h"
 #include "solutions/q437_path_sum_iii.h"
 #include "solutions/q538_convert_bst_to_greater_tree.h"
-#include "solutions/q617_merge_two_binary_trees.h"
 #include "solutions/q543_diameter_of_binary_tree.h"
+#include "solutions/q617_merge_two_binary_trees.h"
 
 # dynamical programming
+#include "solutions/q96_unique_binary_search_trees.h"
 #include "solutions/q198_house_robber.h"
 #include "solutions/q213_house_robber_II.h"
 #include "solutions/q337_house_robber_III.h"
@@ -45,7 +46,6 @@
 #endif
 
 #if 1
-#include "solutions/q101_symmetric_tree.h"
 #endif
 
 #if 0

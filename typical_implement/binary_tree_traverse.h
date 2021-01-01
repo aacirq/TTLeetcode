@@ -242,9 +242,9 @@ static void test_traverse(const vector<int64_t> &vec) {
 static void solve() {
     test_traverse({  });
     test_traverse({ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
-    test_traverse({ 1, TREE_NULL, 2, TREE_NULL, TREE_NULL, TREE_NULL, 3 });
-    test_traverse({ 1, 2, TREE_NULL, 3 });
-    test_traverse({ 1, 2, TREE_NULL, TREE_NULL, 3, TREE_NULL, TREE_NULL, TREE_NULL, TREE_NULL, 4 });
+    test_traverse({ 1, tree_null, 2, tree_null, tree_null, tree_null, 3 });
+    test_traverse({ 1, 2, tree_null, 3 });
+    test_traverse({ 1, 2, tree_null, tree_null, 3, tree_null, tree_null, tree_null, tree_null, 4 });
 }
 
 #endif // TTLEETCODE_BINARY_TREE_TRAVERSE_H

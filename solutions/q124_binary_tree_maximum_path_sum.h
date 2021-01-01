@@ -45,19 +45,18 @@ private:
 #else
 
 class Solution {
-private:
-    int cur_max = INT32_MIN;
 public:
     int maxPathSum(TreeNode *root) {
-        fun(root);
+        int cur_max = INT32_MIN;
+        fun(root, cur_max);
         return cur_max;
     }
 
 private:
-    int fun(TreeNode *root) {
+    int fun(TreeNode *root, int &cur_max) {
         if (root == nullptr) return 0;
-        int num_left = max(fun(root->left), 0);
-        int num_right = max(fun(root->right), 0);
+        int num_left = max(fun(root->left, cur_max), 0);
+        int num_right = max(fun(root->right, cur_max), 0);
         cur_max = max(cur_max, num_left + num_right + root->val);
         return root->val + max(num_left, num_right);
     }
@@ -67,9 +66,9 @@ private:
 
 static void solve() {
     Solution s;
-    cout << s.maxPathSum(construct_tree({ -3 })) << endl;
-    cout << s.maxPathSum(construct_tree({ 1, 2, 3 })) << endl;
-    cout << s.maxPathSum(construct_tree({ -10, 9, 20, tree_null, tree_null, 15, 7 })) << endl;
+    cout << "-3 : " << s.maxPathSum(construct_tree({ -3 })) << endl;
+    cout << " 6 : " << s.maxPathSum(construct_tree({ 1, 2, 3 })) << endl;
+    cout << "42 : " << s.maxPathSum(construct_tree({ -10, 9, 20, tree_null, tree_null, 15, 7 })) << endl;
 }
 
 #endif // TTLEETCODE_Q124_BINARY_TREE_MAXIMUM_PATH_SUM_H
