@@ -35,6 +35,7 @@
 #include "solutions/q617_merge_two_binary_trees.h"
 
 # dynamical programming
+#include "solutions/q53_maximum_subarray.h"
 #include "solutions/q96_unique_binary_search_trees.h"
 #include "solutions/q198_house_robber.h"
 #include "solutions/q213_house_robber_II.h"

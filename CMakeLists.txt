@@ -42,4 +42,5 @@ add_executable(TTLeetcode
         solutions/q96_unique_binary_search_trees.h
         solutions/q98_validate_binary_search_tree.h
         solutions/q101_symmetric_tree.h
-        solutions/q102_binary_tree_level_order_traversal.h)
+        solutions/q102_binary_tree_level_order_traversal.h
+        solutions/q53_maximum_subarray.h)
